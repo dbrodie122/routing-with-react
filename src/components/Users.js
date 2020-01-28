@@ -7,7 +7,7 @@ export default function Users({ setParams, params }) {
   const [users, setUsers] = useState([]);
   const [count, setCount] = useState(0);
 
-  const fetchUsers = async idx => {
+  const fetchUsers = async (idx = 0) => {
     const response = await axios.get(
       `https://acme-users-api-rev.herokuapp.com/api/users/${idx}`
     );
